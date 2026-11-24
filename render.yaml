@@ -1,0 +1,10 @@
+services:
+  - type: web
+    name: onlysnores
+    env: static
+    buildCommand: echo "OnlySnores no build step"
+    staticPublishPath: .
+    routes:
+      - type: rewrite
+        source: /*
+        destination: /index.html
